@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>art模板中使用angular语法</title>
+</head>
+<body>
+	<h2>引入模板</h2>
+		{{include '../public/header.html'}}
+	<h2>输出</h2>
+		{{ngList.name}}
+	<h2>if语句</h2>
+		{{if ngList.age>20}} 
+			<p>大于20岁</p>
+		{{else}}
+			<p>小于等于20岁</p>
+		{{/if}}
+	<h2>循环</h2>
+	<ul>
+		{{each ngList.manage}}
+		<li>{{$value}}</li>
+		{{/each}}
+	</ul>
+</body>
+</html>

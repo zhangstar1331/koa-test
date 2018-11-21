@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表页</title>
+</head>
+<body>
+	<%include public/header.html%>
+	<h2><%=name%></h2>
+	<ul>
+		<%for(var i = 0; i < list.length; i++){%>
+			<li><%=list[i]%></li>
+		<%}%>
+	</ul>
+</body>
+</html>

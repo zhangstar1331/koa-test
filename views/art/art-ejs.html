@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>art模板中使用ejs语法</title>
+</head>
+<body>
+	<h2>引入模板</h2>
+	<%include('../public/header.html')%>
+	<h2>输出</h2>
+	<p><%=ejsList.name%></p>
+	<h2>if语句</h2>
+	<%if(ejsList.age>20){%>
+		<p>大于20岁</p>
+	<%}else{%>
+		<p>小于等于20岁</p>
+	<%}%>
+	<h2>循环</h2>
+	<ul>
+		<%for(var i = 0; i < ejsList.manage.length; i++) {%>
+		<li><%=ejsList.manage[i]%></li>
+		<%}%>
+	</ul>
+</body>
+</html>
